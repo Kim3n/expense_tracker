@@ -1,0 +1,45 @@
+import 'package:expense_tracker/models/expense.dart';
+import 'package:flutter/material.dart';
+
+/// A widget that displays an expense item.
+///
+/// This widget takes an [Expense] object and displays its title, amount, category icon, and formatted date.
+class ExpenseItem extends StatelessWidget {
+  /// Creates an [ExpenseItem] widget.
+  const ExpenseItem({super.key, required this.expense});
+
+  final Expense expense;
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      color: Theme.of(context).colorScheme.secondaryContainer,
+      child: Padding(
+        padding: const EdgeInsets.symmetric(
+          horizontal: 20,
+          vertical: 16,
+        ),
+        child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
+          Text(
+            expense.title,
+            style: Theme.of(context).textTheme.titleLarge,
+          ),
+          const SizedBox(height: 4),
+          Row(
+            children: [
+              Text('\$${expense.amount.toStringAsFixed(2)}'),
+              const Spacer(),
+              Row(
+                children: [
+                  Icon(categoryIcons[expense.category]),
+                  const SizedBox(width: 8),
+                  Text(expense.formattedDate),
+                ],
+              )
+            ],
+          ),
+        ]),
+      ),
+    );
+  }
+}
