@@ -3,6 +3,14 @@ import 'package:flutter/material.dart';
 import 'package:expense_tracker/widgets/chart/chart_bar.dart';
 import 'package:expense_tracker/models/expense.dart';
 
+/// A widget that displays a chart of expenses grouped by category.
+///
+/// The chart displays the total expenses for each category as a bar chart.
+/// The height of each bar is proportional to the total expenses for that category.
+///
+/// The chart also displays icons for each category below the bars.
+///
+/// The [expenses] parameter is a list of [Expense] objects to display in the chart.
 class Chart extends StatelessWidget {
   const Chart({super.key, required this.expenses});
 

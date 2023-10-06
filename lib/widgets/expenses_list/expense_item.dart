@@ -1,9 +1,11 @@
 import 'package:expense_tracker/models/expense.dart';
 import 'package:flutter/material.dart';
 
-/// An expense item.
+/// A widget that displays an expense item.
+///
+/// This widget takes an [Expense] object and displays its title, amount, category icon, and formatted date.
 class ExpenseItem extends StatelessWidget {
-  /// Creates an ExpenseItem widget.
+  /// Creates an [ExpenseItem] widget.
   const ExpenseItem({super.key, required this.expense});
 
   final Expense expense;

@@ -14,6 +14,7 @@ var kDarkColorScheme = ColorScheme.fromSeed(
 void main() {
   runApp(
     MaterialApp(
+      // Sets the dark theme for the app
       darkTheme: ThemeData.dark().copyWith(
         useMaterial3: true,
         colorScheme: kDarkColorScheme,
@@ -31,6 +32,7 @@ void main() {
           ),
         ),
       ),
+      // Sets the light theme for the app
       theme: ThemeData().copyWith(
         useMaterial3: true,
         colorScheme: kColorScheme,
@@ -58,8 +60,7 @@ void main() {
               ),
             ),
       ),
-      // themeMode: ThemeMode.system, // default
-      home: const Expenses(),
+      home: const Expenses(), // Sets the home screen to the Expenses widget
     ),
   );
 }

@@ -2,6 +2,7 @@ import 'package:expense_tracker/widgets/expenses_list/expense_item.dart';
 import 'package:expense_tracker/models/expense.dart';
 import 'package:flutter/material.dart';
 
+/// A widget that displays a list of expenses.
 class ExpensesList extends StatelessWidget {
   final List<Expense> expenses;
   final void Function(Expense) onRemoveExpense;
@@ -72,6 +73,13 @@ class ExpensesList extends StatelessWidget {
   }
 }
 
+/// A widget that represents the background of a dismissible card.
+///
+/// This widget is used in the [ExpensesList] widget to display a background
+/// when a card is swiped to be dismissed. It takes in an [icon] to display
+/// on the background, a [backgroundColor] to set the color of the background,
+/// a [direction] to determine the alignment of the icon, and a [height] to set
+/// the height of the background.
 class DismissableCardBackground extends StatelessWidget {
   final IconData icon;
   final Color backgroundColor;

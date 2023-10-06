@@ -15,6 +15,7 @@ const categoryIcons = {
   Category.work: Icons.work,
 };
 
+/// Represents an expense with a unique id, title, amount, date, and category.
 class Expense {
   Expense({
     required this.title,
@@ -29,17 +30,20 @@ class Expense {
   final DateTime date;
   final Category category;
 
+  /// Returns the formatted date of the expense in the format "MM/dd/yyyy".
   String get formattedDate {
     return formatter.format(date);
   }
 }
 
+/// Represents a collection of expenses for a specific category.
 class ExpenseBucket {
   const ExpenseBucket({
     required this.category,
     required this.expenses,
   });
 
+  /// Creates an expense bucket for a specific category from a list of all expenses.
   ExpenseBucket.forCategory(List<Expense> allExpenses, this.category)
       : expenses = allExpenses
             .where((expense) => expense.category == category)
@@ -48,6 +52,7 @@ class ExpenseBucket {
   final Category category;
   final List<Expense> expenses;
 
+  /// Returns the total amount of expenses in the bucket.
   double get totalExpenses {
     double sum = 0;
 
