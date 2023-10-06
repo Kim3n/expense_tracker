@@ -58,3 +58,5 @@ In the models folder, there is `expense.dart` which contains the `Expense` class
 
 ## Feedback to other student
 The feedback can be found in this draft pull request in the [other students repository](https://github.com/Kim3n/expense_tracker_app/pull/1/commits/48673b4d268eea71717af70937440e9e270b9e6d#diff-45b4180a39438ce43389a8d14179db0d006bede25c2189a90d57034ee93b80f8R83-R261)
+
+We worked together by discussing the class diagrams and commenting eachothers code. We didnt really have any problems with the projects, so there wasnt much help we could give eachother.
